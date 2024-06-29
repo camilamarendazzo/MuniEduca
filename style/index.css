@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+}
+.mobile{
+    display: none;
+}
+header {
+    width: 100vw;
+    height: 4rem;
+    background-color: #131A5D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+header img{
+    height: 100%;
+}
+
+header form{
+    width: 30vw;
+    height: 3rem;
+}
+
+header form .form-control {
+    margin: 0;
+}
+
+header form .btn-outline-success{
+    color: #fff;
+    border-color: #fff;
+}
+
+header form .btn-outline-success:hover{
+    background-color: #00A4BD ;
+}
+
+.btnHeader{
+    display: flex;
+    align-items: center;
+}
+
+.btnHeader button{
+    margin-right: 8px;
+}
+
+.btnHeader .btn-primary{
+    background-color: #00A4BD;
+}
+
+.btnHeader .btn-outline-secondary{
+    color: #fff;
+}
+
+.responsive {
+    display: none;
+}
+
+h3{
+    margin: 1rem 0 0 8rem !important;
+}
+.carrusel {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 0 2rem;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+.container .card {
+    width: 100%;
+    height: auto;
+    margin: 0 1rem;
+}
+.card:hover, .flecha:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-text{
+    display: flex;
+    height: auto;
+    margin: 0;
+}
+
+.row{
+    height: 8rem;
+}
+
+.imgCurso{
+    height: 8rem;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.flecha{
+    width: 3rem;
+    opacity: 50%;
+}
+
+.mainContainer{
+    margin: 1rem 2rem 0  2rem;
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 1rem;
+}
+
+.filtros{
+    display: block;
+}
+
+.grupoFiltro{
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    height: 12rem;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+     header{display: none;}
+
+     .mobile{
+        display: flex;
+        padding: 1rem;
+     }
+     header .btn-outline-success{
+        color: #fff;
+        border-color: #fff;
+     }
+     .userIcon{
+        height: 2rem;
+        width: 2rem;
+     }
+     .c2, .c3{
+        display: none !important;
+     }
+     .row{
+        height: 16rem;
+    }
+
+
+}
