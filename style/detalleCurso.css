@@ -1,0 +1,81 @@
+.mobile{
+    display: none;
+}
+header {
+    width: 100vw;
+    height: 4rem;
+    background-color: #131A5D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+header img{
+    height: 100%;
+}
+
+header form{
+    width: 30vw;
+    height: 3rem;
+}
+
+header form .form-control {
+    margin: 0;
+}
+
+header form .btn-outline-success{
+    color: #fff;
+    border-color: #fff;
+}
+
+header form .btn-outline-success:hover{
+    background-color: #00A4BD ;
+}
+
+.btnHeader{
+    display: flex;
+    align-items: center;
+}
+
+.btnHeader button{
+    margin-right: 8px;
+}
+
+.btnHeader .btn-primary{
+    background-color: #00A4BD;
+}
+
+.btnHeader .btn-outline-secondary{
+    color: #fff;
+}
+
+.responsive {
+    display: none;
+}
+
+.card {
+    border-radius: 15px;
+}
+.card-title {
+    font-weight: bold;
+}
+.btn-primary {
+    width: 100%;
+}
+.card-img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+@media (max-width: 768px) {
+    .card-img {
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+.col-md-4 {
+    display: flex;
+    align-items: stretch;
+}
+
