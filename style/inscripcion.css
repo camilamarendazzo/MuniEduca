@@ -4,6 +4,7 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+
 }
 .mobile{
     display: none;
@@ -57,7 +58,6 @@ header form .btn-outline-success:hover{
     color: #fff;
 }
 
-
 .responsive {
     display: none;
 }
@@ -67,7 +67,6 @@ footer {
     background-color: #131A5D;
     color: #fff;
     text-align: center;
-
 }
 
 footer p {
@@ -90,6 +89,7 @@ footer p {
 .social-icons a:hover {
     color: #ffffff;
 }
+
 
 .signupFrm {
     display: flex;
@@ -149,7 +149,7 @@ footer p {
 }
 .submitBtn {
     display: block;
-    margin-left: auto;
+    margin-left: auto; ;
     padding: 15px 30px;
     border: none;
     background-color: #00A4BD;
@@ -196,30 +196,56 @@ footer p {
     color: #ED8634; /* Color del texto del enlace al pasar el ratón */
 }
 
-.backLink {
-    text-align: left;
-    color: #131A5D;
 
-}
+/* Estilos para la sección de volver */
 .volver{
-    padding: 20px 40px;
-    width: 400px;
-    text-align: center; /* Alinea el texto al centro */
-
-
+    margin: 30px;
 }
+.backLink {
+    margin: 0; /* Ajusta el margen del párrafo */
+    font-size: 14px; /* Tamaño del texto del enlace */
+}
+
 .backLink a {
-    color: #131A5D;
-    text-decoration: underline;
+    color: #007BFF;
+    text-decoration: none;
 }
 
 .backLink a:hover {
-    color: #131A5D;
+    text-decoration: underline;
 }
 /* Responsivo */
 
-@media (max-width: 768px) {
+/* Media queries para hacer responsive */
+@media only screen and (max-width: 768px) {
+    header .btnHeader {
+        display: none;
+    }
+
+
+
+    .signupFrm {
+        padding: 15px;
+    }
+
+    .submitBtn {
+        font-size: 14px;
+    }
     .social-icons {
-        flex-direction: row;
+        flex-wrap: wrap; /* Permite que los íconos se envuelvan en pantallas más pequeñas */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Reduje el tamaño de los íconos en dispositivos más pequeños */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .signupFrm {
+        max-width: 90%;
+    }
+
+    .input {
+        font-size: 14px;
     }
 }
