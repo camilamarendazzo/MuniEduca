@@ -194,9 +194,9 @@ footer{
      .c2, .c3{
         display: none !important;
      }
-     .row{
+     /* .row{
         height: 16rem;
-    }
+    } */
 
     .filtros{
         display: none;
