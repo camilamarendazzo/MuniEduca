@@ -11,7 +11,7 @@ header {
     margin-bottom: 1rem;
 }
 
-header img{
+header a, header a img{
     height: 100%;
 }
 

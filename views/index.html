@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
+      <a href="#">
         <img src="../resources/LogoMuni.png" alt="Bandera municipal">
+      </a>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -29,12 +31,14 @@
         </div>
         
     </header>
+    
     <main>
         <h3>Lo más nuevo</h3>
         <div class="carrusel loMasNuevo">
             <img class="flecha" src="../resources/flechaI.png" alt="flechaIzquierda">
             <div class="container">
                 <div class="card c1 mb-3" style="max-width: 540px;">
+                  <a href="detalleCurso.html">
                     <div class="row g-0">
                       <div class="col-md-4">
                         <img src="../resources/primerosAuxilios.jpg" class="imgCurso rounded-start" alt="primeros Auxilios">
@@ -46,6 +50,7 @@
                         </div>
                       </div>
                     </div>
+                  </a>
                   </div>
                   <div class="card c2 mb-3" style="max-width: 540px;">
                     <div class="row g-0">
@@ -122,12 +127,122 @@
             </div>
             <img class="flecha" src="../resources/flechaD.png" alt="flechaDerecha">
         </div>
+
         <div class="todosLosCursos">
-        <h3>Todos los cursos</h3>
+        <h3 class="catalogoTitle">Todos los cursos</h3>
+
+        <div class="dropdown filtrosDropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtros
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><b>Categoría</b></a></li>
+            <li><div class="dropdown-item filtro">
+              <input type="checkbox" name="salud" id="salud">
+              <label for="salud">Salud</label>
+          </div></li>
+          <li>
+            <div class="dropdown-item filtro">
+              <input type="checkbox" name="gastronomia" id="gastronomia">
+              <label for="gastronomia">Gastronomía</label>
+            </div>
+
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+              <input type="checkbox" name="ciudadania" id="ciudadania">
+              <label for="ciudadania">Ciudadanía</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="idiomas" id="idiomas">
+                <label for="idiomas">Idiomas</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="programacion" id="programacion">
+                <label for="programacion">Programación</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="arte" id="arte">
+                <label for="arte">Arte</label>
+            </div>
+          </li>
+        
+            <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item" href="#"><b>Nivel</b></a></li>
+
+            <li>
+              <div class="dropdown-item filtro">
+                <input type="checkbox" name="principiante" id="principiante">
+                <label for="principiante">Principiante</label>
+            </div>
+            </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="intermedio" id="intermedio">
+                <label for="intermedio">Intermedio</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="avanzado" id="avanzado">
+                <label for="avanzado">Avanzado</label>
+            </div>
+          </li>
+
+          <li><hr class="dropdown-divider"></li>
+
+          <li><a class="dropdown-item" href="#"><b>Duración</b></a></li>
+
+          <li>
+            <div class="dropdown-item filtro">
+              <input type="checkbox" name="menosDeUnaHora" id="menosDeUna">
+              <label for="menosDeUna">Menos de 1 hora</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="entreUnaYTresHoras" id="entreUnaYTres">
+                <label for="entreUnaYTres">Entre 1 y 3 horas</label>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item filtro">
+                <input type="checkbox" name="masDeTresHoras" id="masDeTres">
+                <label for="masDeTres">Más de 3 horas</label>
+            </div>
+          </li>
+          
+          <li><hr class="dropdown-divider"></li>
+
+          <li><a class="dropdown-item" href="#"><b>Acceso</b></a></li>
+          <li>
+            <div class="dropdown-item filtro">
+              <input type="radio" name="acceso" id="gratis">
+              <label for="gratis">Gratis</label>
+          </div>
+          </li>
+        <li>
+          <div class="dropdown-item filtro">
+              <input type="radio" name="acceso" id="pago">
+              <label for="pago">Pago</label>
+          </div>
+        </li>
+
+
+          </ul>
+        </div>
+
         <div class="mainContainer">
             <div class="filtros">
                 <div class="grupoFiltro categorias">
-                    <p>Categoría</p>
+                    <h5>Categoría</h5>
                     <div class="filtro">
                         <input type="checkbox" name="salud" id="salud">
                         <label for="salud">Salud</label>
@@ -154,7 +269,7 @@
                     </div>
                 </div>
                 <div class="grupoFiltro niveles">
-                    <p>Nivel</p>
+                    <h5>Nivel</h5>
                     <div class="filtro">
                         <input type="checkbox" name="principiante" id="principiante">
                         <label for="principiante">Principiante</label>
@@ -169,7 +284,7 @@
                     </div>
                 </div>
                 <div class="grupoFiltro duracion">
-                    <p>Duración</p>
+                    <h5>Duración</h5>
                     <div class="filtro">
                         <input type="checkbox" name="menosDeUnaHora" id="menosDeUna">
                         <label for="menosDeUna">Menos de 1 hora</label>
@@ -184,7 +299,7 @@
                     </div>
                 </div>
                 <div class="grupoFiltro acceso">
-                    <p>Duración</p>
+                    <h5>Acceso</h5>
                     <div class="filtro">
                         <input type="radio" name="acceso" id="gratis">
                         <label for="gratis">Gratis</label>
@@ -198,115 +313,149 @@
                 </div>
                 
             </div>
-
             
             <div class="catalogo">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <a href="detalleCurso.html">
                     <div class="col">
-                        <div class="card h-100">
-                          <img src="../resources/primerosAuxilios.jpg" class="card-img-top" alt="...">
+                      <div class="card h-100">
+                        <div class="imgContainer">
+                          <img src="../resources/primerosAuxilios.jpg" class="card-img-top" alt="primerosAuxilios">
+                        </div>
+                        <div class="newCourseCard">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Primeros auxilio</h5>
+                            <p class="card-text">2 horas <br>Gratis</p>
+                          </div>
+                          <p class="nuevo">¡Nuevo!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>  
+                      <div class="col">
+                        <div class="card h-100">
+                          <div class="imgContainer">
+                            <img src="../resources/portugues.webp" class="card-img-top" alt="portugues">
+                          </div>
+                          <div class="newCourseCard">
+                            <div class="card-body">
+                              <h5 class="card-title">Portugués</h5>
+                              <p class="card-text">10 horas <br>$15.000</p>
+                            </div>
+                            <p class="nuevo">¡Nuevo!</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/portugues.webp" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                          <div class="imgContainer">
+                            <img src="../resources/seguridadVial.webp" class="card-img-top" alt="seguridadVial">
                           </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../resources/seguridadVial.webp" class="card-img-top" alt="...">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Seguridad vial</h5>
+                            <p class="card-text">1 hora <br>Gratis</p>
                           </div>
                         </div>
                       </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../resources/baseDeDatos.jpg" class="card-img-top" alt="...">
+                        <div class="imgContainer">
+                          <img src="../resources/baseDeDatos.jpg" class="card-img-top" alt="baseDeDatos">
+                        </div>
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a short card.</p>
+                          <h5 class="card-title">Base de datos</h5>
+                          <p class="card-text">7 horas <br>$16.000</p>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/css.jpg" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/css.jpg" class="card-img-top" alt="css">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">CSS</h5>
+                            <p class="card-text">4 horas <br> $15.000</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/fundamentosProgramacion.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                          <div class="imgContainer">
+                            <img src="../resources/fundamentosProgramacion.jpg" class="card-img-top" alt="fundamentosProgramacion">
+                          </div>
+                          <div class="newCourseCard">
+                            <div class="card-body">
+                              <h5 class="card-title">Fundamentos de la programación</h5>
+                              <p class="card-text">4 horas <br>Gratis</p>
+                            </div>
+                            <p class="nuevo">¡Nuevo!</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/git.jpg" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/git.jpg" class="card-img-top" alt="git">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Git</h5>
+                            <p class="card-text">1 hora <br>Gratis</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/html.jpg" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/html.jpg" class="card-img-top" alt="html">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Html</h5>
+                            <p class="card-text">$15.000 <br>Gratis</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/ingles.webp" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/ingles.webp" class="card-img-top" alt="ingles">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Inglés</h5>
+                            <p class="card-text">10 horas <br>Gratis</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/italiano.jpeg" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/italiano.jpeg" class="card-img-top" alt="italiano">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Italiano</h5>
+                            <p class="card-text">10 horas <br>$15.000</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/javascript.jpg" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/javascript.jpg" class="card-img-top" alt="javascript">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Javascript</h5>
+                            <p class="card-text">12 horas <br>$20.000</p>
                           </div>
                         </div>
                       </div>
                       <div class="col">
                         <div class="card h-100">
-                          <img src="../resources/metodologiasDeEstudio.webp" class="card-img-top" alt="...">
+                          <div class="imgContainer">
+                            <img src="../resources/metodologiasDeEstudio.webp" class="card-img-top" alt="metodologiasDeEstudio">
+                          </div>
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a short card.</p>
+                            <h5 class="card-title">Metodologías de estudio</h5>
+                            <p class="card-text">3 horas <br>Gratis</p>
                           </div>
                         </div>
                       </div>
@@ -314,7 +463,6 @@
                     
                   </div>
             </div>
-
         </div>
         
     </main>

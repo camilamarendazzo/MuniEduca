@@ -1,11 +1,20 @@
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    width: 100%;
+    overflow-x: hidden; 
 }
+
+p{
+    font-size: smaller;
+}
+
 .mobile{
     display: none;
 }
-header {
-    width: 100vw;
+
+header{
+    width: 100v%;
     height: 4rem;
     background-color: #131A5D;
     display: flex;
@@ -14,7 +23,7 @@ header {
     margin-bottom: 1rem;
 }
 
-header img{
+header a, header a img{
     height: 100%;
 }
 
@@ -64,7 +73,7 @@ h3{
     width: 100vw;
     display: flex;
     align-items: center;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 3rem 0 3rem;
 }
 .container{
     width: 100%;
@@ -73,9 +82,9 @@ h3{
     margin: 0;
 }
 .container .card {
-    width: 100%;
+    width: 100% !important; 
     height: auto;
-    margin: 0 1rem;
+    margin: 0 .5rem;
 }
 .card:hover, .flecha:hover {
     cursor: pointer;
@@ -95,9 +104,6 @@ h3{
     margin: 0;
 }
 
-.row{
-    height: 8rem;
-}
 
 .imgCurso{
     height: 8rem;
@@ -111,10 +117,19 @@ h3{
 }
 
 .mainContainer{
-    margin: 1rem 2rem 0  2rem;
+    width: auto;
+    margin: 1rem 3rem;
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 20% auto;
     gap: 1rem;
+}
+
+.catalogoTitle{
+    margin-left: 3rem !important;
+}
+
+.filtrosDropdown{
+    display: none;
 }
 
 .filtros{
@@ -122,12 +137,43 @@ h3{
 }
 
 .grupoFiltro{
-    margin-bottom: 2rem;
+    border-top: .5px solid #131A5D30;
+    padding: 2rem 0 2rem 1rem;
+}
+
+.filtro{
+    padding-top: .5rem;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;;
+}
+
+.newCourseCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nuevo{
+    color: #ED8634;
+    padding-right: 1rem;
+}
+
+.imgContainer{
+    height: 70%;
 }
 
 .card-img-top{
     height: 12rem;
     object-fit: cover;
+}
+
+footer{
+    background-color: #131A5D;
+    height: 4rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -152,5 +198,24 @@ h3{
         height: 16rem;
     }
 
+    .filtros{
+        display: none;
+    }
+    .filtrosDropdown{
+        display: block;
+        padding: 1rem 3rem;
+    }
+    .filtrosDropdown .btn{
+        width: 100%;
+        background-color: #ED8634;
+        border: none;
+    }
+    .dropdown-menu{
+        width: 80%;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
