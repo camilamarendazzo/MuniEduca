@@ -171,9 +171,58 @@ a{
     object-fit: cover;
 }
 
-footer{
+footer {
+    width: 100%;
     background-color: #131A5D;
-    height: 4rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .footer-center {
+    align-items: center;
+}
+
+footer .footer-right {
+    align-items: flex-end;
+}
+
+footer .footer-right .social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer .footer-right .social-icons a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer .footer-left p,
+footer .footer-center img,
+footer .footer-right .social-icons a {
+    margin: 0.5rem 0;
+}
+
+
+footer .footer-left p {
+    margin: 0;
+}
+
+footer .footer-center img {
+    max-width: 170px;
+    height: auto;
 }
 
 @media screen and (max-width: 768px) {
