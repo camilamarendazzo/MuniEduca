@@ -1,0 +1,36 @@
+
+        .modal-backdrop {
+            display: none;
+        }
+        .modal.show.d-block {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            z-index: 1050;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para modal */
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1; /* Esto hace que el main ocupe el espacio disponible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn.btn-primary {
+        background-color: #ED8634 !important;
+        color: white !important;
+        border: none !important
+
+        }
+        .btn.btn-secondary{
+        background-color: #131A5D !important;
+        color: white !important;
+        border: none !important
+
+        }
