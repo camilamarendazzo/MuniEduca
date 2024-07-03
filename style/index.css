@@ -268,3 +268,9 @@ footer .footer-center img {
     }
 
 }
+.payment-icon {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px; 
+  }
