@@ -221,7 +221,37 @@ footer p {
 .backLink a:hover {
     color: #131A5D;
 }
+.payment-icon {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px; 
+  }
+  /* Estilo adicional para la barra de navegación de pasos */
+.breadcrumb {
+    padding: 0;
+    border: none; 
+    display: flex;
+    justify-content: center; 
+}
 
+.breadcrumb-item {
+    background-color: #d9d7d7 !important; /* Color de fondo para cada ítem */
+    padding: 5px; 
+    color: #8e8c8c !important; 
+    border: 1px groove #c2c0c0 !important;
+    text-decoration: none;
+    display: inline-block;
+    width: 380px; /* Ancho fijo */
+    text-align: center; /* Centrar el texto */
+}
+.breadcrumb-item.active {
+    background-color: #007bff !important;
+    color: #fff !important;/
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: none !important; /* Ocultar la barra entre ítems */
+}
 
 /* Responsivo */
 
