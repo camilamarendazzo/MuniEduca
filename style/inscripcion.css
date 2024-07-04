@@ -1,14 +1,15 @@
-body {
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
+body{
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
     width: 100%;
-    overflow-x: hidden;
+     overflow-x: hidden;
 }
+
 .mobile{
     display: none;
 }
-header {
+
+header{
     width: 100%;
     height: 4rem;
     background-color: #131A5D;
@@ -53,10 +54,15 @@ header form .btn-outline-success:hover{
     background-color: #00A4BD;
 }
 
+
+.btnHeader .btn-primary:hover{
+    background-color: #0b5ed7;
+}
+
+
 .btnHeader .btn-outline-secondary{
     color: #fff;
 }
-
 
 .responsive {
     display: none;
@@ -64,31 +70,57 @@ header form .btn-outline-success:hover{
 
 
 footer {
+    width: 100%;
     background-color: #131A5D;
-    color: #fff;
-    text-align: center;
-
-}
-
-footer p {
-    margin: 0;
-    padding: 0 0 10px;
-}
-
-.social-icons {
+    color: white;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: relative;
+    margin-top: 2rem;
 }
 
-.social-icons a {
-    color: #00A4BD;
-    font-size: 24px;
-    text-decoration: none;
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.social-icons a:hover {
-    color: #ffffff;
+footer .footer-center {
+    align-items: center;
+}
+
+footer .footer-right {
+    align-items: flex-end;
+}
+
+footer .footer-right .social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer .footer-right .social-icons a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer .footer-left p,
+footer .footer-center img,
+footer .footer-right .social-icons a {
+    margin: 0.5rem 0;
+}
+
+
+footer .footer-left p {
+    margin: 0;
+}
+
+footer .footer-center img {
+    max-width: 170px;
+    height: auto;
 }
 
 .signupFrm {
@@ -99,18 +131,22 @@ footer p {
     height: 100vh;
     justify-content: center;
 }
-.form {
+
+.formInscripcion {
     background-color: white;
     width: 400px;
     border-radius: 8px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    align-content: center;
+    margin-left: 70px;
 }
 
 .title {
     font-size: 30px;
     margin-bottom: 50px;
     color: #131A5D;
+    text-align: center;
 }
 .inputContainer {
     position: relative;
@@ -227,32 +263,42 @@ footer p {
     border-radius: 50%;
     margin-right: 5px; 
   }
-  /* Estilo adicional para la barra de navegación de pasos */
-.breadcrumb {
-    padding: 0;
-    border: none; 
+
+
+
+.nav-tabs .nav-link {
+    border: 1px solid #131A5D !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    color: #131A5D!important;
+    transition: background-color 0.2s;
+}
+.nav-tabs .nav-link:hover {
+    border-color: #dee2e6 #dee2e6 #f8f9fa;
+    background-color: #ED8634;
+}
+.nav-tabs .nav-link.active {
+    color: #ED8634;
+    background-color: #00A4BD !important;
+    border-color: #131A5D !important;
+}
+.tab-content {
+    border: 1px solid #131A5D;
+    border-top: none;
+    padding: 20px;
+    background-color: #fff;
+}
+.tab-pane h2 {
+    color: #131A5D;
+}
+
+.form-container {
     display: flex;
-    justify-content: center; 
+    align-items: flex-start;
 }
-
-.breadcrumb-item {
-    background-color: #d9d7d7 !important; /* Color de fondo para cada ítem */
-    padding: 5px; 
-    color: #8e8c8c !important; 
-    border: 1px groove #c2c0c0 !important;
-    text-decoration: none;
-    display: inline-block;
-    width: 350px; /* Ancho fijo */
-    text-align: center; /* Centrar el texto */
+.form-container img {
+    margin-left: 20px;
 }
-.breadcrumb-item.active {
-    background-color: #007bff !important;
-    color: #fff !important;/
-}
-.breadcrumb-item + .breadcrumb-item::before {
-    content: none !important; /* Ocultar la barra entre ítems */
-}
-
 /* Responsivo */
 
 @media (max-width: 768px) {
@@ -267,8 +313,8 @@ footer p {
         flex-direction: column;
     }
 
-    .col-lg-6,
-    .col-md-6 {
+    .col-lg-7,
+    .col-md-7 {
         max-width: 100%;
         flex: 0 0 100%;
     }
@@ -288,18 +334,26 @@ footer p {
         flex-direction: column;
     }
 
-    .col-lg-6,
-    .col-md-6 {
+    .col-lg-7
+    .col-md-7 {
         max-width: 100%;
         flex: 0 0 100%;
     }
 
     .img-fluid {
-        margin-bottom: 20px;
-        width: 100%;
+        max-width: 100%;
+        align-items: center;
     }
 }
-
+.image-container {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+.image-container img {
+    max-width: 100%;
+    max-height: 300px; /* Ajusta este valor según tus necesidades */
+}
 @media only screen and (max-width: 480px) {
     .signupFrm {
         max-width: 90%;
@@ -352,5 +406,6 @@ footer p {
        display: flex;
        flex-direction: column;
    }
+
 
 }
