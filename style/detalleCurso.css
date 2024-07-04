@@ -186,3 +186,13 @@ footer a {
 footer a:hover {
     color: #FFD700;
 }
+
+@media screen and (max-width: 768px){
+    .charts{
+        flex-direction: column;
+    }
+    .barChart, .lineChart{
+        margin: 2rem;
+        width: 100%;
+    }
+}
