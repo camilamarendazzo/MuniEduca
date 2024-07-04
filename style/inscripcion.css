@@ -242,7 +242,7 @@ footer p {
     border: 1px groove #c2c0c0 !important;
     text-decoration: none;
     display: inline-block;
-    width: 380px; /* Ancho fijo */
+    width: 350px; /* Ancho fijo */
     text-align: center; /* Centrar el texto */
 }
 .breadcrumb-item.active {

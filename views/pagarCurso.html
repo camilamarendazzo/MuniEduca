@@ -47,7 +47,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Pago</li>
                 </ul>
             </nav>
-            <form action="pagoRealizado.html" class="row justify-content-center" style="width:80%; margin: 0 auto 57px">
+            <form action="pagoRealizado.html" class="row justify-content-center" style="width:80%; margin: 0 auto">
 
                 <div class="col-md-4">
                     <div>
@@ -66,16 +66,16 @@
                               <img src="../resources/mastercard.png" alt="Mastercard" class="payment-icon">
                               <img src="../resources/americanexpress.png" alt="Amex" class="payment-icon"> 
                             </label>
-                          </div>
+                        </div>
                           
-                          <div class="form-check">
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
                             <label class="form-check-label" for="exampleRadios3">
                                 Mercado Pago
                               <img src="../resources/mercadopago.jpg" alt="Mercado Pago" class="payment-icon"> 
                              
                             </label>
-                          </div>
+                        </div>
                         <div class="inputContainer">
                             <input type="text" class="input form-control" placeholder="Nombre en tarjeta" required>
                         </div>
@@ -88,9 +88,15 @@
                         <div class="inputContainer">
                             <input type="number" class="input form-control" placeholder="CVC" required>
                         </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="saveCard" name="saveCard">
+                            <label class="form-check-label" for="saveCard">
+                                Guardar esta tarjeta de forma segura para comprar más adelante
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <h5>Detalle del Pedido</h5>
+                    <div >
+                        <h5 style="margin-top: 20px;">Detalle del Pedido</h5>
                         <div class="card">
                                 <div class="row g-0">
                                     <div class="col-md-4">
