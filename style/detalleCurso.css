@@ -75,11 +75,7 @@ header form .btn-outline-success:hover{
     height: 100%;
     border-radius: 15px 0 0 15px;
 }
-@media (max-width: 768px) {
-    .card-img {
-        border-radius: 15px 15px 0 0;
-    }
-}
+
 
 .col-md-4 {
     display: flex;
@@ -188,11 +184,50 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px){
+    header{display: none;}
+    .mobile{
+        display: flex;
+        padding: 1rem;
+     }
+     header .btn-outline-success{
+        color: #fff;
+        border-color: #fff;
+     }
+     .userIcon{
+        height: 2rem;
+        width: 2rem;
+     }
+     .c2, .c3{
+        display: none !important;
+     }
+     .filtros{
+        display: none;
+    }
+    .filtrosDropdown{
+        display: block;
+        padding: 1rem 3rem;
+    }
+    .filtrosDropdown .btn{
+        width: 100%;
+        background-color: #ED8634;
+        border: none;
+    }
+    .dropdown-menu{
+        width: 80%;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
     .charts{
         flex-direction: column;
     }
     .barChart, .lineChart{
         margin: 2rem;
-        width: 100%;
+        width: 80%;
     }
+    .card-img {
+        border-radius: 15px 15px 0 0;
+    }
+    
 }
