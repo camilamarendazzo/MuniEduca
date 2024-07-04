@@ -270,7 +270,7 @@ footer .footer-center img {
     border: 1px solid #131A5D !important;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    color: #131A5D!important;
+    color: #131A5D !important;
     transition: background-color 0.2s;
 }
 .nav-tabs .nav-link:hover {
@@ -278,9 +278,10 @@ footer .footer-center img {
     background-color: #ED8634;
 }
 .nav-tabs .nav-link.active {
-    color: #ED8634;
+    color: white !important;
     background-color: #00A4BD !important;
     border-color: #131A5D !important;
+
 }
 .tab-content {
     border: 1px solid #131A5D;
