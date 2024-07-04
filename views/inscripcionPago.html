@@ -13,35 +13,39 @@
   <a href="index.html">
     <img src="../resources/LogoMuni.png" alt="Bandera municipal">
   </a>
-  <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-  <div class="btnHeader">
-    <button type="button" class="btn btn-primary">Iniciar sesion</button>
-    <button type="button" class="btn btn-outline-secondary">Registrarse</button>
-  </div>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div class="btnHeader">
+        <button type="button" class="btn btn-primary">Iniciar sesion</button>
+        <button type="button" class="btn btn-outline-secondary">Registrarse</button>
+    </div>
+    
+</header>
+<header class="mobile">
+  <a href="#">
+    <img src="../resources/BanderaMuni.png" alt="Bandera municipal">
+  </a>
+    <div class="btnHeader">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <img class="userIcon" src="../resources/user.svg" alt="perfil">
+    </div>
+    
 </header>
 
-<header class="mobile">
-  <img src="../resources/BanderaMuni.png" alt="Bandera municipal">
-  <div class="btnHeader">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    <img class="userIcon" src="../resources/user.svg" alt="perfil">
-  </div>
-</header>
 <body>
 <div class="container">
   <div class="container mt-5">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Selección de Curso</a>
+        <a class="nav-link" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="false">Selección de Curso</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Inscripción</a>
+        <a class="nav-link  active" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="true">Inscripción</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="False">Pago</a>
+        <a class="nav-link " id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="False">Pago</a>
       </li>
 
     </ul>
@@ -62,7 +66,7 @@
             <div class="col-lg-6">
               <!-- Columna para el formulario -->
               <div class="signupFrm d-flex align-items-center justify-content-start">
-                <form action="" class="formInscripcion">
+                <form action="pagarCurso.html" class="formInscripcion">
                   <h1 class="title">Formulario de Registro</h1>
                   <div class="inputContainer">
                     <input type="text" class="input form-control" placeholder="Ingresa tu nombre">

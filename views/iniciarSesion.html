@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MuniEduca</title>
 
-  <link rel="stylesheet" href="../style/index.css">
   <link rel="stylesheet" href="../style/inscripcion.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,46 +14,82 @@
   <a href="index.html">
     <img src="../resources/LogoMuni.png" alt="Bandera municipal">
   </a>
-  <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-  <div class="btnHeader">
-    <button type="button" class="btn btn-primary">Iniciar sesion</button>
-    <button type="button" class="btn btn-outline-secondary">Registrarse</button>
-  </div>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div class="btnHeader">
+        <button type="button" class="btn btn-primary">Iniciar sesion</button>
+        <button type="button" class="btn btn-outline-secondary">Registrarse</button>
+    </div>
+    
+</header>
+<header class="mobile">
+  <a href="#">
+    <img src="../resources/BanderaMuni.png" alt="Bandera municipal">
+  </a>
+    <div class="btnHeader">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <img class="userIcon" src="../resources/user.svg" alt="perfil">
+    </div>
+    
 </header>
 
-<header class="mobile">
-  <img src="../resources/BanderaMuni.png" alt="Bandera municipal">
-  <div class="btnHeader">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    <img class="userIcon" src="../resources/user.svg" alt="perfil">
-  </div>
-</header>
 <body>
 <div class="container">
-  <div class="row align-items-stretch">
-    <div class="col-lg-6 d-flex align-items-center">
-      <!-- Columna para la imagen -->
-      <img src="../resources/primerosAuxilios.jpg" class="img-fluid" alt="Curso imagen">
-    </div>
-    <div class="col-lg-6">
-      <!-- Columna para el formulario -->
-      <div class="signupFrm d-flex align-items-center justify-content-center">
-        <form action="" class="formInscripcion">
-          <h1 class="title">Iniciar Sesión</h1>
-                    <div class="inputContainer">
-            <input type="email" class="input form-control" placeholder="Ingresa tu correo electrónico">
-            <label for="" class="label">Correo Electrónico</label>
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="false">Selección de Curso</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link  active" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="true">Inscripción</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link " id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="False">Pago</a>
+      </li>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+        <h2></h2>
+        <p></p>
+      </div>
+      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-lg-6 d-flex align-items-start">
+              <!-- Columna para la imagen -->
+              <img src="../resources/CursoHtmlVideo.jpg" class="img-fluid" alt="Curso imagen">
+            </div>
+            <div class="col-lg-6">
+              <!-- Columna para el formulario -->
+              <div class="signupFrm d-flex align-items-center justify-content-start">
+
+                <form action="pagarCurso.html" class="formInscripcion">
+                  <h1 class="title">Iniciar Sesión</h1>
+                            <div class="inputContainer">
+                    <input type="email" class="input form-control" placeholder="Ingresa tu correo electrónico">
+                    <label for="" class="label">Correo Electrónico</label>
+                  </div>
+                  <div class="inputContainer">
+                    <input type="password" class="input form-control" placeholder="Ingresa tu contraseña">
+                    <label for="" class="label">Contraseña</label>
+                  </div>
+                  <button type="submit" class="submitBtn">Iniciar Sesión</button>
+                  <p class="loginLink">¿Olvidaste tu contraseña? <a href="iniciarSesion.html">Ingrese aquí</a></p>
+                </form>
+
+
+              </div>
+            </div>
+
           </div>
-          <div class="inputContainer">
-            <input type="password" class="input form-control" placeholder="Ingresa tu contraseña">
-            <label for="" class="label">Contraseña</label>
-          </div>
-          <button type="submit" class="submitBtn">Iniciar Sesión</button>
-          <p class="loginLink">¿Olvidaste tu contraseña? <a href="iniciarSesion.html">Ingrese aquí</a></p>
-        </form>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <h2></h2>
+        <p></p>
       </div>
     </div>
   </div>
