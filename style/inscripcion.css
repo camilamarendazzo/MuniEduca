@@ -9,7 +9,7 @@ body {
     display: none;
 }
 header {
-    width: 100vw;
+    width: 100%;
     height: 4rem;
     background-color: #131A5D;
     display: flex;
@@ -308,4 +308,49 @@ footer p {
     .input {
         font-size: 14px;
     }
+}
+
+/*de index*/
+@media screen and (max-width: 768px) {
+    header{display: none;}
+
+    .mobile{
+       display: flex;
+       padding: 1rem;
+    }
+    header .btn-outline-success{
+       color: #fff;
+       border-color: #fff;
+    }
+    .userIcon{
+       height: 2rem;
+       width: 2rem;
+    }
+    .c2, .c3{
+       display: none !important;
+    }
+    /* .row{
+       height: 16rem;
+   } */
+
+   .filtros{
+       display: none;
+   }
+   .filtrosDropdown{
+       display: block;
+       padding: 1rem 3rem;
+   }
+   .filtrosDropdown .btn{
+       width: 100%;
+       background-color: #ED8634;
+       border: none;
+   }
+   .dropdown-menu{
+       width: 80%;
+   }
+   .mainContainer{
+       display: flex;
+       flex-direction: column;
+   }
+
 }
