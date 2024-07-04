@@ -51,9 +51,19 @@
                             <p><strong>Categoria:</strong> Programación</p>
                             <p><strong>Duración:</strong> 6 horas</p>
                         </div>
-                        <button onclick="location.href='inscripcion.html'" class="btn btn-primary btn-inscribirse">Inscribirse</button>
+                        <button onclick="location.href='inscripcionPago.html'" class="btn btn-primary btn-inscribirse">Inscribirse</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="lineChart">
+                <h3 class="chartTitle">Popularidad del curso</h3>
+                <canvas id="myLineChart"></canvas>
+            </div>
+            <div class="barChart">
+                <h3 class="chartTitle">Otros usuarios también eligieron</h3>
+                <canvas id="myBarChart"></canvas>
             </div>
         </div>
     </div>
@@ -79,5 +89,56 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzOg9QAFbWcI0pC9m45pXseK3zRtqzHIuHEe0Q5cYhGc" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-XrDph7mRAK5KVQdAlwQaD6XlE3UzSyIcfjw8mG5XvSs4yoTKlZPL5lBZPjqTfFct" crossorigin="anonymous"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myBarChart');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['CSS', 'JAVASCRIPT', 'BASE DE DATOS', 'GIT'],
+            datasets: [{
+              label: 'Usuarios cada 100',
+              data: [90, 74, 20, 45],
+              borderColor: '#ED8634 ',
+              backgroundColor: 'rgba(237, 134, 52, 0.7)',
+              borderWidth: 3,
+              borderRadius: 5,
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100
+              }
+            },
+            responsive: true
+          }
+        });
+
+        const lineChart = document.getElementById('myLineChart');
+        new Chart(lineChart, {
+            type: 'line',
+            options: {
+                responsive: true,
+            },
+            data:{
+              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+              datasets: [
+                {
+                  label: 'Usuarios inscriptos',
+                  data: [2000, 2500, 4000, 3600, 5100, 5300],
+                  borderColor: '#ED8634 ',
+                  backgroundColor: 'rgba(237, 134, 52, 0.7)',
+                  pointStyle: 'circle',
+                  pointRadius: 10,
+                  pointHoverRadius: 15
+                }
+              ]
+            }
+        });
+      </script>
 </body>
 </html>
