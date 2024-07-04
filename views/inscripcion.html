@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>MuniEduca</title>
   <link rel="stylesheet" href="../style/inscripcion.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <header>
   <a href="index.html">
@@ -21,6 +21,7 @@
     <button type="button" class="btn btn-outline-secondary">Registrarse</button>
   </div>
 </header>
+
 <header class="mobile">
   <img src="../resources/BanderaMuni.png" alt="Bandera municipal">
   <div class="btnHeader">
@@ -29,6 +30,7 @@
   </div>
 </header>
 <body>
+
 <div class="container">
   <div class="container mt-5">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -38,9 +40,7 @@
       <li class="nav-item" role="presentation">
         <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Inscripción</a>
       </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Pago</a>
-      </li>
+
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -50,12 +50,16 @@
       <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <h2></h2>
         <p></p>
-        <div class="row">
-          <div class="col-12">
-            <div class="form-container">
-              <div class="col-lg-7 ">
-                <!-- Columna para el formulario -->
-                <form action="../views/detalleCurso.html" class="formInscripcion">
+        <div class="container mt-5">
+          <div class="row ">
+            <div class="col-lg-5 image-container" >
+              <!-- Columna para la imagen -->
+              <img src="../resources/primerosAuxilios.jpg" class="img-fluid" alt="Curso imagen">
+            </div>
+            <div class="col-lg-7">
+              <!-- Columna para el formulario -->
+              <div class="form-wrapper">
+                <form action="../views/pagarCurso.html" class="formInscripcion">
                   <h1 class="title">Formulario de Registro</h1>
                   <div class="inputContainer">
                     <input type="text" class="input form-control" placeholder="Ingresa tu nombre">
@@ -77,12 +81,8 @@
                   <p class="loginLink">¿Ya tienes cuenta? <a href="iniciarSesion.html">Inicia sesión aquí</a></p>
                 </form>
               </div>
-              <div class="col-lg-5 image-container" style="height: 100vh;">
-                <!-- Columna para la imagen -->
-                <img src="../resources/primerosAuxilios.jpg" class="img-fluid" alt="Curso imagen">
-              </div>
-
             </div>
+
           </div>
         </div>
       </div>
@@ -111,6 +111,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -5 24 24" width="28" fill="currentColor"><path d="M15.812.017H4.145C1.855.017 0 1.852 0 4.116v5.768c0 2.264 1.856 4.1 4.145 4.1h11.667c2.29 0 4.145-1.836 4.145-4.1V4.116c0-2.264-1.856-4.1-4.145-4.1zM13.009 7.28L7.552 9.855a.219.219 0 0 1-.314-.196V4.35c0-.161.173-.266.318-.193l5.458 2.735a.216.216 0 0 1-.005.389z"></path></svg>
     </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
