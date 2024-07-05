@@ -183,24 +183,51 @@ footer a:hover {
     color: #FFD700;
 }
 
+.nav-tabs .nav-link {
+    border: 1px solid #131A5D !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    color: #131A5D !important;
+    transition: background-color 0.2s;
+}
+.nav-tabs .nav-link:hover {
+    border-color: #dee2e6 #dee2e6 #f8f9fa;
+    background-color: #ED8634;
+}
+.nav-tabs .nav-link.active {
+    color: white !important;
+    background-color: #00A4BD !important;
+    border-color: #131A5D !important;
+
+}
+.tab-content {
+
+    border-top: none;
+    padding: 20px;
+    background-color: #fff;
+}
+.tab-pane h2 {
+    color: #131A5D;
+}
+
 @media screen and (max-width: 768px){
     header{display: none;}
     .mobile{
         display: flex;
         padding: 1rem;
-     }
-     header .btn-outline-success{
+    }
+    header .btn-outline-success{
         color: #fff;
         border-color: #fff;
-     }
-     .userIcon{
+    }
+    .userIcon{
         height: 2rem;
         width: 2rem;
-     }
-     .c2, .c3{
+    }
+    .c2, .c3{
         display: none !important;
-     }
-     .filtros{
+    }
+    .filtros{
         display: none;
     }
     .filtrosDropdown{
@@ -229,5 +256,5 @@ footer a:hover {
     .card-img {
         border-radius: 15px 15px 0 0;
     }
-    
+
 }
